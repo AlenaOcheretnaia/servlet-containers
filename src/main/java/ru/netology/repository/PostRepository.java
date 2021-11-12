@@ -21,9 +21,6 @@ public class PostRepository {
 
     public List<Post> all() {
         List<Post> listAll = new ArrayList<>();
-//        for (long i = 1; i <= collectionRequests.entrySet().size(); i++) {
-//            listAll.add(collectionRequests.get(i));
-//        }
         for (Post postR : collectionRequests.values()) {
             listAll.add(postR);
         }
@@ -42,10 +39,11 @@ public class PostRepository {
         if (idReques == 0) {
             ++count;
             long newId = count;
-            if (collectionRequests.containsKey(newId)) {
+            while (collectionRequests.containsKey(newId)) {
                 ++count;
+                newId = count;
             }
-            newId = count;
+            //newId = count;
             post.setId(newId);
             collectionRequests.put(newId, post);
         } else {

@@ -1,7 +1,9 @@
 package ru.netology.servlet;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import ru.netology.controller.PostController;
-import ru.netology.repository.PostRepository;
+import ru.netology.repository.PostRepositoryStubImpl;
 import ru.netology.service.PostService;
 
 import javax.servlet.http.HttpServlet;
@@ -9,20 +11,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class MainServlet extends HttpServlet {
+  @Autowired
   private PostController controller;
 
   @Override
   public void init() {
-    final var repository = new PostRepository();
-    final var service = new PostService(repository);
-    controller = new PostController(service);
+//    final var repository = new PostRepositoryStubImpl();
+//    final var service = new PostService(repository);
+//    controller = new PostController(service);
+    // отдаём список пакетов, в которых нужно искать аннотированные классы
   }
-
-//  @Override
-//  protected void service(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-//    resp.setContentType("text/plane");
-//    resp.getWriter().print("OK");
-//  }
 
   @Override
   protected void service(HttpServletRequest req, HttpServletResponse resp) {

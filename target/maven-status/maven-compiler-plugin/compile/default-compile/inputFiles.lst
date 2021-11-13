@@ -1,0 +1,8 @@
+/Users/alena/IdeaProjects/aloch_servlets/src/main/java/ru/netology/controller/PostController.java
+/Users/alena/IdeaProjects/aloch_servlets/src/main/java/ru/netology/servlet/MainServlet.java
+/Users/alena/IdeaProjects/aloch_servlets/src/main/java/ru/netology/exception/NotFoundException.java
+/Users/alena/IdeaProjects/aloch_servlets/src/main/java/ru/netology/model/Post.java
+/Users/alena/IdeaProjects/aloch_servlets/src/main/java/ru/netology/repository/PostRepository.java
+/Users/alena/IdeaProjects/aloch_servlets/src/main/java/ru/netology/Main.java
+/Users/alena/IdeaProjects/aloch_servlets/src/main/java/ru/netology/service/PostService.java
+/Users/alena/IdeaProjects/aloch_servlets/src/main/java/ru/netology/repository/PostRepositoryStubImpl.java

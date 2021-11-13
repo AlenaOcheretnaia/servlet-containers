@@ -6,12 +6,17 @@ import ru.netology.model.Post;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Repository
 public class PostRepositoryStubImpl implements PostRepository {
-    private int count;
-    private ConcurrentMap<Long, Post> collectionRequests;
+    private int count = 0;
+    private ConcurrentHashMap<Long, Post> collectionRequests = new ConcurrentHashMap<>();
+
+//    public PostRepositoryStubImpl() {
+//        count = 0;
+//        collectionRequests = new ConcurrentHashMap<>();
+//    }
 
     public List<Post> all() {
         return new ArrayList<>(collectionRequests.values());

@@ -14,12 +14,12 @@
           <element id="module-output" name="servlets" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.2.10.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.2.10.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.2.10.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.2.10.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.2.10.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.2.10.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.2.18.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.2.18.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.2.18.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.2.18.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.2.18.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.2.18.RELEASE" />
           <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.8.6" />
         </element>
       </element>

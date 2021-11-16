@@ -7,15 +7,14 @@ import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.atomic.AtomicInteger;
 
-
-// Stub
 public class PostRepository {
-    private int count;
+    public static volatile AtomicInteger count;
     private ConcurrentMap<Long, Post> collectionRequests;
 
     public PostRepository() {
-        count = 0;
+        count = new AtomicInteger();
         collectionRequests = new ConcurrentHashMap<>();
     }
 
@@ -37,13 +36,12 @@ public class PostRepository {
     public Post save(Post post) {
         Long idReques = post.getId();
         if (idReques == 0) {
-            ++count;
-            long newId = count;
+            count.getAndIncrement();
+            long newId = count.get();
             while (collectionRequests.containsKey(newId)) {
-                ++count;
-                newId = count;
+                count.getAndIncrement();
+                newId = count.get();
             }
-            //newId = count;
             post.setId(newId);
             collectionRequests.put(newId, post);
         } else {
@@ -59,7 +57,8 @@ public class PostRepository {
     public void removeById(long id) {
         if (collectionRequests.containsKey(id)) {
             collectionRequests.remove(id);
-            count--;
+            count.getAndDecrement();
         }
     }
 }
+
